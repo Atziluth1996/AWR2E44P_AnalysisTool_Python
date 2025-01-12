@@ -1,0 +1,21 @@
+{
+  "version": "1.0.0",
+  "tasks": [
+    {
+      "label": "Build DLL",
+      "type": "shell",
+      "command": "gcc",
+      "args": [
+        "-shared",               // 生成动态链接库
+        "-o", "EGE_Decompression.dll",     // 输出 DLL 文件
+        "-fPIC",                 // 位置无关代码
+        "EGE_Decompression.c"              // 输入 C 文件
+      ],
+      "group": {
+        "kind": "build",
+        "isDefault": true
+      },
+      "problemMatcher": []
+    }
+  ]
+}

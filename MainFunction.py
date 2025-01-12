@@ -27,7 +27,7 @@ def UpdateDataList(name, index, mode):
             if file.suffix.lower() == ".bin":# 如果是文件
                 # 获取文件的大小
                 file_size = file.stat().st_size
-                print(h.chirpCfg["numRx"] * h.chirpCfg["numRangebins"] * h.chirpCfg["numDopplerbins"] * uint16_size * 2 * h.CompressionCfg["CompressionRatio"])
+                # print(h.chirpCfg["numRx"] * h.chirpCfg["numRangebins"] * h.chirpCfg["numDopplerbins"] * uint16_size * 2 * h.CompressionCfg["CompressionRatio"])
                 if file_size == h.chirpCfg["numRx"] * h.chirpCfg["numRangebins"] * h.chirpCfg["numDopplerbins"] * uint16_size * 2 * h.CompressionCfg["CompressionRatio"]:
                     h.MainHandle["UI_FileListbox"].insert(tk.END, file.name)
     
